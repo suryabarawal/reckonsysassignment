@@ -1,0 +1,15 @@
+<div class = "container">
+	<div class="wrapper">
+		<form class="form-signin" [formGroup]="loginForm">       
+			<h3 class="form-signin-heading">Log In</h3>
+				<h6>username: admin</h6>
+				<h6>Password: admin</h6>
+			   <h6 *ngIf="errorMessage" style="color:red">Username and password is incorrect</h6>
+			  <input type="text" class="form-control" name="username" formControlName="username" placeholder="Username" required="" autofocus="" />
+			  <app-error-control-message [control]="loginForm.controls.username" [fieldName]="'username'"></app-error-control-message>
+			  <input type="password" class="form-control" name="password" formControlName="password" placeholder="Password" required=""/>     		  
+			  <app-error-control-message [control]="loginForm.controls.password" [fieldName]="'password'"></app-error-control-message>
+			  <button class="btn btn-lg btn-primary btn-block" (click)="login()" [disabled]="!loginForm.valid">Login</button>  			
+		</form>			
+	</div>
+</div>

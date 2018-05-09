@@ -1,0 +1,8 @@
+{
+    "memberList": [
+        { "id": 1, "name": "Jane Dee", "section1": 0, "section2": 0, "section3": 0, "section4": 0, "joindate": 0, "status": "active"},
+        { "id": 2, "name": "John Dee ", "section1": 1, "section2": 1, "section3": 1, "section4": 1, "joindate": 0, "status": "active"},
+        { "id": 3, "name": "Surya", "section1": 2, "section2": 2, "section3": 2, "section4": 2, "joindate": 0, "status": "active"},
+        { "id": 4, "name": "Praksh", "section1": 3, "section2": 3, "section3": 3, "section4": 3, "joindate": 0, "status": "active"}
+    ]    
+}

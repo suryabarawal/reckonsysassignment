@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row">
+    
+      <div class="col-md-12">
+          <div class="member-filter-create clearfix">
+      <div class="col-md-4 float-left">
+        <div class="filter-heading">
+          <h3>Members List</h3>
+          <form action="">
+            <input type="text" class="col-md-7 float-left form-control" placeholder="Search" [(ngModel)]="searchtext" [ngModelOptions]="{standalone: true}">
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4 float-right">
+        <div class="float-right">
+          <button class="btn btn-success button-create"> Create a new member</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h4 class="text-center">List of User</h4>
+    <table class="table  table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col" class="text-center">Section
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>1st</th>
+                  <th>2nd</th>
+                  <th>3rd</th>
+                  <th>4th</th>
+                </tr>
+              </thead>
+            </table>
+          </th>
+          <th scope="col">Join Date</th>
+          <th scope="col">Status</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alluserdata of allUserData | search:searchBasedOnFields:searchText;">
+          <td>{{alluserdata.id}}</td>
+          <td>{{alluserdata.name}}</td>
+          <td>
+            <table class="table table-bordered  ">
+              <tr>
+                <td>{{alluserdata.section1}}</td>
+                <td>{{alluserdata.section2}}</td>
+                <td>{{alluserdata.section3}}</td>
+                <td>{{alluserdata.section4}}</td>
+              </tr>
+            </table>
+          </td>
+          <td>{{alluserdata.joindate}}</td>
+          <td>
+            <span class="btn btn-success">{{alluserdata.status}}</span>
+          </td>
+          <td>edit</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>

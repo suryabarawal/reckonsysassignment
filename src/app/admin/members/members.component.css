@@ -1,0 +1,13 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+    overflow: auto;
+  }
+  .button-create{
+      margin-top: 40px;
+  }
+  .member-filter-create{
+      margin: 25px 0;
+  }
